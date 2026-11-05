@@ -1,0 +1,1 @@
+Copia de la skill "humanizer" v3.1.0 de Siqi Chen (https://github.com/blader/humanizer), licencia MIT (ver LICENSE). Se incluye aquí para que la skill de prospección la tenga siempre disponible. Para actualizarla, reemplaza SKILL.md por la versión nueva del repo original.

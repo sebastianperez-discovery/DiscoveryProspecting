@@ -29,7 +29,7 @@ Links: siempre directos, nunca enlaces de redirección (por ejemplo, de Google).
 - Clientes, casos o cifras de Discovery sin verificar (sí lo público: perfiles en 72 horas, misma zona horaria, CO-PE-MX).
 - Adjuntos, presentaciones, propuestas o precios.
 - Urgencia inventada o técnicas de cierre.
-- Rasgos de texto de IA: "no es X, es Y", tríadas forzadas, guiones largos, muletillas, frases de remate. Todo pasa por el humanizador.
+- Rasgos de texto de IA: "no es X, es Y", tríadas forzadas, guiones largos, muletillas, frases de remate. Todo pasa por la skill humanizer (ver [humanizar.md](humanizar.md)).
 
 ## WhatsApp (máx. 50 palabras, sin enlaces, sin firma)
 **Segundo toque (solo a quien recibió correo):**
@@ -64,7 +64,7 @@ Corto, sin culpa: entendemos que no sea el momento, dejamos el contacto para cua
 - [ ] Ninguna frase sobre problemas o situación interna del cliente
 - [ ] Qué hacemos, en una frase y ligado a su tecnología
 - [ ] 70 a 110 palabras, asunto < 60, una sola pregunta
-- [ ] Pasó por el humanizador
+- [ ] Pasó por la skill humanizer
 - [ ] Sin firma; queda como borrador y lo envía el comercial
 
 ## Dónde se guarda

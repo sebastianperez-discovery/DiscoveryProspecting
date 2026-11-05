@@ -15,19 +15,21 @@ skills/prospeccion-discovery/
     ├── correos-whatsapp.md        estructura, qué no va, plantillas, ejemplo y lista de chequeo
     ├── llamadas.md                guion, preguntas orientadas al "no", objeciones, registro
     ├── salesforce.md              campos, campañas, tareas, CallDisposition, pausa, detalles técnicos
-    └── cadencia-pendientes.md     cadencia y "¿qué hago hoy?"
+    ├── cadencia-pendientes.md     cadencia y "¿qué hago hoy?"
+    └── humanizar.md               cómo usar el humanizer y lista mínima si no está
+skills/humanizer/                  skill humanizer (MIT, de github.com/blader/humanizer), incluida
+dist/                              prospeccion-discovery.zip y humanizer.zip listos para subir a Claude
 ```
 
 ## Requisitos
 - Claude con los conectores de **Salesforce** (lectura y escritura) y **Gmail**, y búsqueda web activa.
-- Recomendado: la skill **humanizer** (los textos para clientes pasan por ella).
+- La skill **humanizer**, que viene incluida en este repo. Todos los textos para clientes pasan por ella.
 
 ## Instalación
 
 **Claude (web o escritorio)**
-1. Descarga este repo (Code → Download ZIP) y descomprímelo.
-2. Comprime solo la carpeta `skills/prospeccion-discovery` en un .zip.
-3. En Claude: Ajustes → Capacidades → Skills → Subir skill, y elige ese .zip. Actívala.
+1. Descarga los dos archivos de la carpeta `dist/`: `prospeccion-discovery.zip` y `humanizer.zip`.
+2. En Claude: Ajustes → Capacidades → Skills → Subir skill. Sube los dos y actívalos.
 
 Si Discovery tiene plan Team o Enterprise, el dueño de la organización puede subirla una vez para todo el equipo.
 
@@ -36,10 +38,10 @@ Si Discovery tiene plan Team o Enterprise, el dueño de la organización puede s
 /plugin marketplace add sebastianperez-discovery/DiscoveryProspecting
 /plugin install discovery-prospecting@discovery-partners
 ```
-El repo es privado: necesitas acceso en GitHub.
+Así se instalan las dos skills (prospección y humanizer). El repo es privado, así que necesitas acceso en GitHub.
 
 **Slackbot o Salesforce (Habilidades de Agentforce)**
-Crea la habilidad y pega el contenido de `SKILL.md`; si permite adjuntar archivos, agrega también los de `references/`.
+Crea una habilidad y pega el contenido de `skills/prospeccion-discovery/SKILL.md`. Si permite adjuntar archivos, agrega también los de `references/`. Crea una segunda habilidad con `skills/humanizer/SKILL.md`.
 
 ## Cómo se usa
 Pídele en lenguaje natural, por ejemplo:
@@ -50,6 +52,12 @@ Pídele en lenguaje natural, por ejemplo:
 - "¿Qué hago hoy?"
 
 La skill nunca envía mensajes ni cambia Salesforce sin tu OK.
+
+## Actualizar los .zip
+Después de cambiar una skill, vuelve a generar los .zip:
+```
+cd skills && zip -r ../dist/prospeccion-discovery.zip prospeccion-discovery && zip -r ../dist/humanizer.zip humanizer
+```
 
 ## Cambios
 Las mejoras se proponen por pull request. Cambios de reglas comerciales, con aprobación de Sebastián Pérez.
