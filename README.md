@@ -25,6 +25,27 @@ dist/                              prospeccion-discovery.zip y humanizer.zip lis
 - Claude con los conectores de **Salesforce** (lectura y escritura) y **Gmail**, y búsqueda web activa.
 - La skill **humanizer**, que viene incluida en este repo. Todos los textos para clientes pasan por ella.
 
+## Conectar Salesforce y Gmail (una vez por persona)
+La skill trabaja con tu propio usuario de Salesforce: ve y registra lo que tu usuario puede ver y editar.
+
+**Salesforce**
+1. En Claude: Ajustes → Conectores.
+2. Si la organización de Discovery en Claude ya tiene el conector de Salesforce configurado, solo dale **Conectar** e inicia sesión con tu usuario de Salesforce de Discovery. Listo.
+3. Si no aparece, agrégalo como **conector personalizado**:
+   - URL: `https://api.salesforce.com/platform/mcp/v1/d/discoverypartners/platform/headless-360`
+   - Autenticación: iniciar sesión (OAuth) con "Usa tu propio cliente OAuth".
+   - Consumer Key y Consumer Secret: pídeselos al administrador de Salesforce de Discovery por un canal privado. **Nunca los pegues en un chat ni los subas a este repo.**
+4. Abre una conversación nueva para que Claude tome el conector.
+5. Prueba: "¿Cuántos leads tengo a mi nombre en Salesforce?". Si responde con un número, quedó bien.
+
+Usa el servidor **headless-360**: el de solo registros (`sobject-all`) no sirve para informes ni para todo lo que hace la skill.
+
+**Gmail**
+Ajustes → Conectores → Gmail → Conectar, con tu correo de Discovery. La skill solo crea borradores; nunca envía.
+
+**Búsqueda web**
+Actívala en Ajustes (o en el menú de herramientas del chat). Sin ella no hay investigación de señales.
+
 ## Instalación
 
 **Claude (web o escritorio)**
