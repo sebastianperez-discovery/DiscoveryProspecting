@@ -1,0 +1,6 @@
+{
+  "name": "discovery-prospecting",
+  "version": "1.0.0",
+  "description": "Prospección comercial de Discovery Partners (SAP y Salesforce): investigación de señales, correos y WhatsApp, llamadas, campañas y tareas en Salesforce, cadencia y pendientes.",
+  "author": { "name": "Discovery Partners" }
+}

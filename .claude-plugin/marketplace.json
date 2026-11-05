@@ -1,0 +1,12 @@
+{
+  "name": "discovery-partners",
+  "owner": { "name": "Discovery Partners" },
+  "plugins": [
+    {
+      "name": "discovery-prospecting",
+      "source": "./",
+      "description": "Skill de prospección del equipo comercial de Discovery Partners.",
+      "version": "1.0.0"
+    }
+  ]
+}
